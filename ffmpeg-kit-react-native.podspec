@@ -16,9 +16,20 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/arthenica/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
 
-  s.default_subspec   = 'https'
+  s.default_subspec   = 'precompiled-gpl'
 
   s.dependency "React-Core"
+
+  s.subspec 'precompiled-gpl' do |ss|
+    ss.vendored_frameworks = 'Frameworks/ffmpegkit.xcframework',
+                             'Frameworks/libavcodec.xcframework',
+                             'Frameworks/libavdevice.xcframework',
+                             'Frameworks/libavfilter.xcframework',
+                             'Frameworks/libavformat.xcframework',
+                             'Frameworks/libavutil.xcframework',
+                             'Frameworks/libswresample.xcframework',
+                             'Frameworks/libswscale.xcframework'
+  end
 
   s.subspec 'min' do |ss|
       ss.source_files      = '**/FFmpegKitReactNativeModule.m',
