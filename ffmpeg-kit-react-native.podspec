@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
   s.dependency "React-Core"
 
   s.subspec 'precompiled-gpl' do |ss|
-    ss.source_files      = '**/FFmpegKitReactNativeModule.m',
-                             '**/FFmpegKitReactNativeModule.h'
+    ss.source_files      = 'ios/FFmpegKitReactNativeModule.m',
+                           'ios/FFmpegKitReactNativeModule.h'
     ss.vendored_frameworks = 'Frameworks/ffmpegkit.xcframework',
                              'Frameworks/libavcodec.xcframework',
                              'Frameworks/libavdevice.xcframework',
