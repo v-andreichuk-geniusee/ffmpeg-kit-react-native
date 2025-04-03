@@ -16,12 +16,13 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/v-andreichuk-geniusee/ffmpeg-kit-react-native.git", :tag => "react.native.v#{s.version}" }
 
-  s.default_subspec   = 'precompiled-gpl'
+  s.default_subspec   = 'local-full-gpl'
 
   s.dependency "React-Core"
 
   # Just custom podspec name, could be anything, but remember updating name wherever it's used
-  s.subspec 'precompiled-gpl' do |ss|
+  # Frameworks are were download somewhere from the github repos and added locally
+  s.subspec 'local-full-gpl' do |ss|
     ss.source_files      = 'ios/FFmpegKitReactNativeModule.m',
                            'ios/FFmpegKitReactNativeModule.h'
     ss.vendored_frameworks = 'ios/Frameworks/ffmpegkit.xcframework',
