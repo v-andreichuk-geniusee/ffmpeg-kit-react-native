@@ -24,14 +24,14 @@ Pod::Spec.new do |s|
   s.subspec 'precompiled-gpl' do |ss|
     ss.source_files      = 'ios/FFmpegKitReactNativeModule.m',
                            'ios/FFmpegKitReactNativeModule.h'
-    ss.vendored_frameworks = 'Frameworks/ffmpegkit.xcframework',
-                             'Frameworks/libavcodec.xcframework',
-                             'Frameworks/libavdevice.xcframework',
-                             'Frameworks/libavfilter.xcframework',
-                             'Frameworks/libavformat.xcframework',
-                             'Frameworks/libavutil.xcframework',
-                             'Frameworks/libswresample.xcframework',
-                             'Frameworks/libswscale.xcframework'
+    ss.vendored_frameworks = 'ios/Frameworks/ffmpegkit.xcframework',
+                             'ios/Frameworks/libavcodec.xcframework',
+                             'ios/Frameworks/libavdevice.xcframework',
+                             'ios/Frameworks/libavfilter.xcframework',
+                             'ios/Frameworks/libavformat.xcframework',
+                             'ios/Frameworks/libavutil.xcframework',
+                             'ios/Frameworks/libswresample.xcframework',
+                             'ios/Frameworks/libswscale.xcframework'
     ss.ios.deployment_target = '12.1' 
   end
 
