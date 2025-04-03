@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
 
+  # Just custom podspec name, could be anything, but remember updating name wherever it's used
   s.subspec 'precompiled-gpl' do |ss|
     ss.source_files      = 'ios/FFmpegKitReactNativeModule.m',
                            'ios/FFmpegKitReactNativeModule.h'
