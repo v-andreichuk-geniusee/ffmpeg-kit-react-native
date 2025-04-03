@@ -14,13 +14,15 @@ Pod::Spec.new do |s|
   s.requires_arc      = true
   s.static_framework  = true
 
-  s.source       = { :git => "https://github.com/arthenica/ffmpeg-kit.git", :tag => "react.native.v#{s.version}" }
+  s.source       = { :git => "https://github.com/v-andreichuk-geniusee/ffmpeg-kit-react-native.git", :tag => "react.native.v#{s.version}" }
 
   s.default_subspec   = 'precompiled-gpl'
 
   s.dependency "React-Core"
 
   s.subspec 'precompiled-gpl' do |ss|
+    ss.source_files      = '**/FFmpegKitReactNativeModule.m',
+                             '**/FFmpegKitReactNativeModule.h'
     ss.vendored_frameworks = 'Frameworks/ffmpegkit.xcframework',
                              'Frameworks/libavcodec.xcframework',
                              'Frameworks/libavdevice.xcframework',
@@ -29,6 +31,7 @@ Pod::Spec.new do |s|
                              'Frameworks/libavutil.xcframework',
                              'Frameworks/libswresample.xcframework',
                              'Frameworks/libswscale.xcframework'
+    ss.ios.deployment_target = '12.1' 
   end
 
   s.subspec 'min' do |ss|

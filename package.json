@@ -18,8 +18,8 @@
     "ffmpeg-kit",
     "ios"
   ],
-  "repository": "https://github.com/arthenica/ffmpeg-kit",
-  "author": "ARTHENICA <open-source@arthenica.com> (https://www.arthenica.com)",
+  "repository": "https://github.com/v-andreichuk-geniusee/ffmpeg-kit-react-native",
+  "author": "v-andreichuk-geniusee",
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/arthenica/ffmpeg-kit/issues"
@@ -64,7 +64,7 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": false
     },
     "github": {
       "release": true
