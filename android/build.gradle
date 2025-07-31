@@ -56,6 +56,11 @@ android {
 repositories {
   mavenCentral()
   google()
+  
+  // Local repository for AAR files
+  flatDir {
+    dirs 'libs'
+  }
 
   def found = false
   def defaultDir = null
@@ -125,5 +130,5 @@ repositories {
 
 dependencies {
   api 'com.facebook.react:react-native:+'
-  implementation 'com.arthenica:ffmpeg-kit-' + safePackageName(safeExtGet('ffmpegKitPackage', 'https')) + ':' + safePackageVersion(safeExtGet('ffmpegKitPackage', 'https'))
+  implementation(name: 'ffmpeg-kit-full-gpl-6.0-2', ext: 'aar')
 }
