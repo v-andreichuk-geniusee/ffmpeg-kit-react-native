@@ -130,31 +130,5 @@ repositories {
 
 dependencies {
   api 'com.facebook.react:react-native:+'
-  
-  // Check if local AAR exists (for development)
-  def localAarFile = new File(project.projectDir, 'libs/ffmpeg-kit-full-gpl-6.0-2.aar')
-  if (localAarFile.exists()) {
-    // Use local AAR during development
-    implementation(name: 'ffmpeg-kit-full-gpl-6.0-2', ext: 'aar')
-  } else {
-    // When installed as dependency, look for AAR in node_modules location
-    def nodeModulesAarFile = new File(project.projectDir, '../../android/libs/ffmpeg-kit-full-gpl-6.0-2.aar')
-    if (nodeModulesAarFile.exists()) {
-      implementation files('../../android/libs/ffmpeg-kit-full-gpl-6.0-2.aar')
-    } else {
-      throw new GradleException(
-        "\n" +
-        "===================================================================\n" +
-        "FFMPEG-KIT SETUP REQUIRED\n" +
-        "===================================================================\n" +
-        "The ffmpeg-kit-full-gpl-6.0-2.aar file is missing.\n" +
-        "Please download it and place it in your project:\n\n" +
-        "1. Download: ffmpeg-kit-full-gpl-6.0-2.aar\n" +
-        "2. Create: android/libs/ directory in your RN project\n" +
-        "3. Copy the AAR file to: android/libs/ffmpeg-kit-full-gpl-6.0-2.aar\n\n" +
-        "For more info: https://github.com/v-andreichuk-geniusee/ffmpeg-kit-react-native\n" +
-        "==================================================================="
-      )
-    }
-  }
+  implementation(name: 'ffmpeg-kit-full-gpl-6.0-2', ext: 'aar')
 }
